@@ -1,5 +1,5 @@
 # llm_agentic_ai_system
-production-grade code to integrate LangGraph + Milvus for:
+integrate LangGraph + Milvus with Qwen LLM for:
 
 RAG retrieval
 
