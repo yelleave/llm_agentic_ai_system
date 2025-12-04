@@ -1,11 +1,10 @@
 import argparse
-
+from llm.qwen_llm import QwenLLM
 from memory.milvus_client import milvus_connect, create_memory_collection
 from memory.memory_store import AgentMemory
 from embeddings.encoder import EmbeddingEncoder
 from graph.nodes import build_graph
 
-from openai import OpenAI
 
 def main():
     # connect + setup
@@ -13,7 +12,7 @@ def main():
     create_memory_collection()
     memory = AgentMemory()
     encoder = EmbeddingEncoder()
-    llm = OpenAI().chat.completions
+    llm = QwenLLM()
 
     graph = build_graph()
 
